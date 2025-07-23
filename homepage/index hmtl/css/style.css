@@ -1,0 +1,218 @@
+/* === General Reset & Fonts === */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0a0a0a;
+  color: #fff;
+  line-height: 1.6;
+}
+
+a {
+  color: #00ffe7;
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background: #000;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+}
+
+nav a {
+  margin: 0 1rem;
+}
+
+#themeToggle {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* === Glitch Logo === */
+.glitch {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  position: relative;
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.glitch::before {
+  animation: glitchTop 1s infinite linear alternate-reverse;
+  top: -2px;
+  color: #ff00c8;
+}
+
+.glitch::after {
+  animation: glitchBot 1s infinite linear alternate-reverse;
+  top: 2px;
+  color: #00fff7;
+}
+
+@keyframes glitchTop {
+  0% { clip-path: inset(0 0 85% 0); }
+  100% { clip-path: inset(0 0 20% 0); }
+}
+
+@keyframes glitchBot {
+  0% { clip-path: inset(85% 0 0 0); }
+  100% { clip-path: inset(20% 0 0 0); }
+}
+
+/* === Hero Section === */
+.hero {
+  padding: 6rem 2rem 3rem;
+  text-align: center;
+  position: relative;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero .highlight {
+  color: #00ffe7;
+}
+
+.hero input[type="text"] {
+  margin-top: 1.5rem;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+  width: 300px;
+}
+
+/* === Product Cards === */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.product-card {
+  background: #1a1a1a;
+  border-radius: 16px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(0,255,231,0.1);
+  transition: transform 0.3s ease;
+}
+
+.product-card img {
+  width: 100%;
+  max-height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.product-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.product-card p {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  color: #ccc;
+}
+
+.product-card a {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: #00ffe7;
+  color: #000;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+/* === Badges === */
+.badge {
+  font-size: 0.8rem;
+  padding: 2px 8px;
+  border-radius: 6px;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+
+.badge.hot {
+  background-color: #ff0055;
+  color: white;
+}
+
+.badge.new {
+  background-color: #00ffe7;
+  color: black;
+}
+
+/* === Footer === */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: #000;
+  color: #777;
+  font-size: 0.9rem;
+}
+
+/* Light mode overrides */
+body.light-mode {
+  background-color: #f7f7f7;
+  color: #232946;
+}
+
+body.light-mode header,
+body.light-mode footer {
+  background: #fff;
+  color: #232946;
+}
+
+body.light-mode .glitch {
+  color: #232946;
+}
+
+body.light-mode .hero {
+  background: #e6f7fa;
+}
+
+body.light-mode .product-card {
+  background: #fff;
+  color: #232946;
+  box-shadow: 0 0 30px rgba(127,90,240,0.08);
+}
+
+body.light-mode .product-card p {
+  color: #444;
+}
+
+body.light-mode .product-card a {
+  background: #7f5af0;
+  color: #fff;
+}
+
+body.light-mode .badge.hot {
+  background-color: #ff0055;
+  color: #fff;
+}
+
+body.light-mode .badge.new {
+  background-color: #7f5af0;
+  color: #fff;
+}

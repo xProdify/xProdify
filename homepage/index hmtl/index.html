@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prodify – Future of Tech & AI</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
+  <script src="js/app.js" defer></script>
+  <style>
+    .animated-shapes {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .shape {
+      position: absolute;
+      border-radius: 50%;
+      background: linear-gradient(45deg, rgba(255,255,255,0.1), rgba(255,255,255,0.3));
+      animation: float 10s infinite ease-in-out;
+      filter: blur(15px);
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0) translateX(0); }
+      50% { transform: translateY(-50px) translateX(30px); }
+      100% { transform: translateY(0) translateX(0); }
+    }
+
+    .hero {
+      position: relative;
+      z-index: 1;
+    }
+  </style>
+</head>
+<body class="dark-mode">
+  <header>
+    <div class="logo glitch" data-text="prodify">prodify</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="tech.html">Tech</a>
+      <a href="ai-tools.html">AI Tools</a>
+      <button id="themeToggle" type="button">🌗</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="animated-shapes">
+        <div class="shape" style="width: 120px; height: 120px; top: 20%; left: 15%; animation-delay: 0s;"></div>
+        <div class="shape" style="width: 80px; height: 80px; top: 40%; left: 70%; animation-delay: 2s;"></div>
+        <div class="shape" style="width: 100px; height: 100px; top: 60%; left: 30%; animation-delay: 4s;"></div>
+        <div class="shape" style="width: 150px; height: 150px; top: 10%; left: 50%; animation-delay: 1s;"></div>
+      </div>
+      <h1><span class="highlight">Power the Future</span> with Bold Tech & Smart Tools</h1>
+      <p><strong>Crush deadlines</strong> and <strong>automate everything</strong> with the world’s smartest tools.</p>
+      <input type="text" placeholder="Search tools or gadgets..." id="searchBar" />
+    </section>
+
+    <section class="product-grid">
+      <div class="product-card tilt">
+        <img src="assets/products/camera.jpg" alt="Camera" />
+        <h3>Canon EOS R50 <span class="badge hot">🔥 Trending</span></h3>
+        <p>Perfect for creators. Compact & powerful. <br><em>Level up your content game today.</em></p>
+        <a href="https://www.bhphotovideo.com/c/product/1738897-REG/canon_5811c002_eos_r50_mirrorless_camera.html" target="_blank">View on B&H</a>
+      </div>
+
+      <div class="product-card tilt">
+        <img src="assets/products/notionai.jpg" alt="Notion AI" />
+        <h3>Notion AI <span class="badge new">✨ New</span></h3>
+        <p>Automate writing, notes & research. <br><em>Your second brain in the cloud.</em></p>
+        <a href="https://affiliate.notion.so/" target="_blank">Try Notion AI</a>
+      </div>
+
+      <div class="product-card tilt">
+        <img src="assets/products/pictory.jpg" alt="Pictory AI" />
+        <h3>Pictory</h3>
+        <p>Turn scripts into videos in minutes. <br><em>Let AI edit while you sleep.</em></p>
+        <a href="https://pictory.ai/?ref=prodify" target="_blank">Start Free Trial</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Prodify – Powered by AI. Built for Creators.</p>
+  </footer>
+</body>
+</html>
